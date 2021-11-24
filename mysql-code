@@ -47,6 +47,9 @@ $mysqli->query($sql,$resultmode)
    </body>
 </html>
 $mysqli->query($sql,$resultmode)
+if ($mysqli->query("Drop DATABASE TUTORIALS")) {
+            printf("Database TUTORIALS dropped successfully.<br />");
+         }
 
 
 
