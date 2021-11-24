@@ -1,0 +1,22 @@
+$mysqli = new mysqli($host, $username, $passwd, $dbName, $port, $socket);//untuk konek ke database
+$mysqli->close(); // tutup database
+<html>
+   <head>
+      <title>Connecting MySQL Server</title>
+   </head>
+   <body>
+      <?php
+         $dbhost = 'localhost';
+         $dbuser = 'root';
+         $dbpass = 'root@123';
+         $mysqli = new mysqli($dbhost, $dbuser, $dbpass);//konnek ke database
+         
+         if($mysqli->connect_errno ) {
+            printf("Connect failed: %s<br />", $mysqli->connect_error);
+            exit();
+         }
+         printf('Connected successfully.<br />');
+         $mysqli->close();
+      ?>
+   </body>
+</html>
